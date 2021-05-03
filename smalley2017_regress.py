@@ -2033,18 +2033,18 @@ def main():
     from scipy.signal import detrend
     ##models to loop over
     model = [
-             #'MRI',
-             #'WACCM',
-             #'CMAM',
-             #'CCSRNIES',
-             #'LMDZrepro',
-             #'GEOSCCM',
-             #'CCSRNIES-MIROC3.2',
+             'MRI',
+             'WACCM',
+             'CMAM',
+             'CCSRNIES',
+             'LMDZrepro',
+             'GEOSCCM',
+             'CCSRNIES-MIROC3.2',
              'CNRM-CM5-3',
-             #'NIWA-UKCA',
-             #'CMAM_CCMI',
-             #'GEOSCCM_CCMI',
-             #'MRI-ESM1r1'
+             'NIWA-UKCA',
+             'CMAM_CCMI',
+             'GEOSCCM_CCMI',
+             'MRI-ESM1r1'
             ]
 
     model = sorted(model)##sort the models being evaluated alphebetically
@@ -2133,6 +2133,7 @@ def main():
     for cv in model:
         ##***********************************keep in main function*************************************
         ##determine if simulation is in CCMVal-2 or CCMI-1 experiments
+        print(cv)
         if(
            cv == 'CCSRNIES-MIROC3.2'
         or cv == 'CNRM-CM5-3'
